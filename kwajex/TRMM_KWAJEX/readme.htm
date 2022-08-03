@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)ftp://atmgcm.msrc.sunysb.edu/pub/trmm/kwjx/readme -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2719.2200" name=GENERATOR></HEAD>
+<BODY><PRE>TRMM KWAJEX Budget Analysis from 06:00 GM 7/24/1999 to 12:00 GMT 9/14/1999
+
+Version 0 ---- 7/6/2002
+
+The two fortran programs read the two ascii data files for single-level and
+multi-level fields respectively.  The netcdf file contains all the data.  The 
+files are self-explanatory.
+
+This is a preliminary release.  Future revision is anticated as better estimates of surface rainfall and latent and sensible heat fluxes become available.
+
+Special thanks to:
+
+ Courtney Schumacher at the Univ. of Washington and
+ Paul Ciesielski at the Colorado State University
+ for their active participation in the project.
+
+
+This version of the variational budget analysis has used the 
+following data sources:
+
+ 1. TRMM KWAJEX field campaign soundings quality controlled by Sandra Yuter 
+    at UW and additional sounding data from Dev Roy and Jeff Halverson at GSFC,
+    operational sounding data prepared by Paul Ciesielski at CSU. 
+
+ 2. Surface meteorological variables and radiative fluxes 
+    prepared by Courtney Schumacher and Jose Fuentes at U. Virginia.
+
+ 3. ISCCP TOA and surface radiative fluxes and cloud information from
+    Bill Rossow's group at GISS
+
+ 4. Surface precipitation from radar and raingauges 
+    supplied by Courtney Schumacher at UW, and TRMM rainfall from the 
+    GSFC DAAC.
+
+ 5. NCEP analysis of upper air fields and surface latent and sensible heat 
+   fluxes prepared by Paul Ciesielski at CSU
+
+
+ These data sources have been used to obtain the best estimates of 
+ area-averaged variables for the analysis domain.  They are then
+ subjected to the constrained variational analysis of Zhang et al. 
+ (MWR, 2001). 
+
+
+Description of data sources for each variable in the released data:
+ 
+6-hourly time series of single-level fields:
+
+1.	surface precipitation
+
+Radar rainfall of every three hours at 2 km x 2 km resolution from UW is averaged in the 
+budget domain (see web http://atmgcm.msrc.sunysb.edu/trmm/trmmkwjx/mainkwjx.html) and 
+to six hour bins to form one time series.  Hourly rain gauge measurements from Carlos, 
+Gagan, Kwajalein, and Roi are averaged to six hours to form another time series.  The 
+TRMM combined precipitation product of 2B31 is used to fill some six-hour bins (for a total of 
+27 six-hour bins).  These three data sources are then equally weighted to form an averaged 
+rainfall estimate.  For time bins when no measurements are available (only one six-hour bin), 
+the adjusted NCEP rainfall in the budget domain is used, with the adjustment from using the 
+regression of the analysis rainfall against the available data.
+
+2.	surface latent heat flux
+
+This is from the NCEP analysis of latent heat flux, as judged between the consistency of 
+NCEP surface winds and the surface mini-tower wind measurements during the IOP at the 
+Meck Island from the University of Virginia, as well as the consistency of the surface winds 
+and the latent heat flux.
+
+3.	surface sensible heat flux
+
+Same as above
+
+4.	surface pressure
+
+Equally weighted between the Meck Island observation and the balloon sounding stations.  
+Time bins with no data (for a total of 3 six-hour bins) are filled with adjusted NCEP analysis 
+based on regression against available data.
+
+5.	surface air temperature
+
+Same as above
+
+6.	surface wind speed
+
+Same as above
+
+7. surface u wind
+
+Same as above
+
+8. surface v wind
+
+Same as above
+
+9. surface net downward radiation
+
+Average of domain averaged ISCCP radiation fluxes (two closest ISCCP grids) and surface 
+mini-tower measurements at Meck Island all averaged to six hours
+
+10. surface upward shortwave radiation
+
+Same as above
+
+11. surface downward shortwave radiation
+
+Same as above
+
+12. surface upward longwave radiation
+
+Same as above
+
+13. surface downward longwave radiation
+
+Same as above
+
+14. TOA upward shortwave radiation
+
+ISCCP averaged
+
+15. TOA downward shortwave radiation
+
+ISCCP averaged
+
+16. TOA upward longwave radiation
+
+ISCCP averaged
+
+17. ISCCP clound amount
+
+18. Time derivative of column precipitable water
+
+From the analyzed sounding data.  Note that vertical integration uses the analyzed surface 
+pressure and the 100 mb as the top pressure of the integration.
+
+19. Column integrated horizontal transport of water vapor
+
+From the variational analysis.  Note that vertical integration uses the analyzed surface 
+pressure and the 100 mb as the top pressure of the integration.
+
+20. Surface evaporation
+
+See surface latent heat flux.  This variable is provided here to check the column moisture 
+budget in the unit of (mm/hour)
+
+21. Time derivative of dry static energy
+
+Same as above
+
+22. Column integrated horizontal transport of dry static energy.  Note that vertical integration 
+uses the analyzed surface pressure and the 100 mb as the top pressure of the integration.
+ 
+Same as above
+
+23. Column integrated radiative heating
+
+Derived from the above surface and TOA radiative fluxes
+
+23. Column integrated latent heating
+
+Derived from surface precipitation.  This variable is provided here to check the column energy 
+budget
+
+6-hourly time-pressure cross sections of multi-level fields:
+
+All analyzed from the constrained variational analysis method of Zhang et al. (MWR 2001).  
+Input data are 9 sounding stations, with five of them quality-controlled by Sandra Yuter at UW 
+(brown, lae, roi, kwaj, wotja), one from Dev Roy at GSFC (Meck), and three from operational 
+soundings from Paul Ciesielsky at CSU (upa_91348, upa_91366,and upa_91376).  The 
+NCEP upper air analysis has been used as a background and initial guess.
+
+1. Temperature
+2. Water vapor mixing ratio 
+3. u wind
+4. v wind
+5. pressure vertical velocity
+Same as above
+6. horizontal wind divergence
+7. horizontal advective tendency of temperature
+8. vertical advective tendency of temperature
+9. horizontal advective tendency of water vapor
+10. vertical advective tendency of water vapor
+11. dry static energy
+12. horizontal advective tendency of dry static energy
+13. vertical advective tendency of dry static energy
+14. time derivative of dry static energy
+15. time derivative of temperature
+16.  time derivative of water vapor
+17. apparent heating rate Q1
+18. apparent moisture sink Q2
+
+For original input data, please visit the UW webpage at 
+http://www.atmos.washington.edu/gcg/MG/KWAJ/lh.html
+
+Please report problems to the following email addess:
+
+ mzhang@notes.cc.sunysb.edu
+
+Minghua Zhang
+</PRE></BODY></HTML>

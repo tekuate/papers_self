@@ -1,0 +1,15 @@
+
+.r con constants
+.r eq0 2-box model, use forcing.pro
+.r eq1 diffusion heat
+.r eq2 diffusion + upwelling
+climate sensitivity for the diffusion paper NJIM
+
+Analytic: solution
+Equation: numerical 
+
+u=0 same
+
+u= <> 0, boundary a little diff
+
+test.pro contains the functions

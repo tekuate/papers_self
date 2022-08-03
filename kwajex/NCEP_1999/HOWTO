@@ -1,0 +1,48 @@
+
+
+
+
+
+1, Data are uwnd.1999.nc,vwnd.1999.nc and hgt.1999.nc. They are daily data downloaded from NCEP/NCAR website, four times daily, 00z,06z,12z,18z.
+
+
+2, There are two gs files: span1.gs and span2.gs, which can plot two files span1.gmf and span2.gmf (Aug09-Aug13 and Sep01-Sep05).
+
+Following are the steps to use Grads to do some plots:
+
+a: Type the command (gradsnc) first under the current directory.
+gradsnc
+
+b: type 
+yes
+
+c: type
+run span1.gs
+run span2.gs
+
+d: type
+quit
+
+
+3, Then two files span1.gmf and span2.gmf will be produced.
+
+
+4, run convert.sh to convert these two gmf files to ps files.(./convert.sh)
+
+
+5, gv span1.ps and gv span2.ps to check the plots.
+
+
+6, To do some changes with the plots, go to span1.gs and span2.gs files and edit where you want, and then follow from Step 2 again.
+
+
+7, Two useful links to understand commands and functions in Grads:
+
+http://www.iges.org/grads/gadoc/commandsatt.html
+
+http://www.iges.org/grads/gadoc/functionsatt.html
+
+
+
+:)
+

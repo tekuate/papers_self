@@ -1,0 +1,27 @@
+
+Dear Dr. Zhang,
+
+I have received the review comments on your above-referenced paper.
+ 
+Based upon the reviews and my examination of the manuscript, I regretfully inform you that your paper must be rejected from further consideration for publication in Monthly Weather Review at this time.  
+
+Reviewers noted serious flaws with the material that would require extensive revisions, make the manuscript a new piece of work, and likely take longer than the two months MWR allots to revise a paper in process. 
+
+The major flaw with the current version of the manuscript is that there is no substance to the conclusions. The manuscript takes a single physics package (CAM3.1) and pairs that physics package with two dynamical cores (IAP and CAM Spectral). The same simulations are done with each model and, unsurprisingly, the results are different. The difference are traced different equilibrium in the physics (i.e. diabatic heating). But ultimately we know that the differences originate in the dynamical core because that is the only thing that is different between the models. If the manuscript can explain how and why the differences between the dynamical cores manifest as differences in the climate state, then the paper would be of great interest to the community.
+
+The authors should also note that we know that a given model climate is a function of the model's effective resolution and that two dynamical cores with the SAME grid can have different effective resolutions. As a result, the differences found in the manuscript might be simply due to different equivalent resolutions between the IAP and CAM spectral dynamical cores. In fact, based on the existing literature this would be an appropriate null hypothesis.
+
+I would also note that the IAP dynamical core appears to be largely equivalent to the UCLA / CSU dynamical core that was constructed more than two decades ago. Both models use a lat/lon grid, Arakawa C-grid staggering with leap-frog time stepping. Dynamical cores have evolved significantly over the last two decades and I wonder how useful it is to undertaking this comparison of two rather dated dynamical cores.
+
+I understand that you have recently submitted a manuscript to MWR with the same title as this manuscript. Please withdraw the second manuscript. I understand that you have invested a significant amount of time producing this manuscript. If you can address the reviewer concerns along with my own concerns, I would be happy to see this manuscript resubmitted at a later date.
+
+Below are specific comments. Should you decide to revise the manuscript for resubmission accordingly, please upload it as a new submission to the AMS manuscript tracking system, along with your detailed responses to reviewers.  No cover letter to me is needed unless it contains essential information not provided in your responses. 
+
+Thank you for considering the Monthly Weather Review for the publication of your research results. We wish you a more positive result with future endeavors.
+
+Sincerely,
+
+Todd Ringler
+Editor
+Monthly Weather Review
+
