@@ -1,0 +1,1186 @@
+\documentclass[12pt]{article}
+\usepackage{psfig}
+
+\includeonly{report_mjo2_fig1,report_mjo2_fig2}
+
+\oddsidemargin .25in
+\evensidemargin .25in
+\textwidth 6.0in
+\topmargin 0.5in
+\headheight .3in
+\headsep .4in
+\textheight 9.0in
+%\footheight .2in
+\footskip .7in
+
+\begin{document}
+\title{\Large \bf 
+Zonal momentum budget of the Madden-Julian Oscillation:
+The roles of advection and convective momentum transport
+}
+
+\author{\bf Jialin Lin$^{1}$, Minghua Zhang$^{2}$ and Brian Mapes$^{1}$\\ 
+\bf
+$^{1}$ NOAA-CIRES Climate Diagnostics Center, Boulder, CO 80305\\
+\bf
+$^{2}$ State University of New York, Stony Brook, NY 11794\\
+December 2003\\
+\vspace*{2.5in}\\
+}
+\date{
+{\it Corresponding author address:} Dr. Jialin Lin,\\
+NOAA-CIRES Climate Diagnostics Center,\\
+325 Broadway, R/CDC1, Boulder, CO 80305\\
+Email: jialin.lin@noaa.gov
+}
+\maketitle
+
+\newpage
+
+\topmargin -0.1in
+\setlength{\baselineskip}{24pt}
+\setlength{\baselineskip}{30pt}
+
+\hspace*{2.0in}\noindent{\bf ABSTRACT}
+
+  Linear, dissipative models have been widely used to study the 
+Madden-Julian Oscillation (MJO). The mechanical damping has been shown to
+be an important parameter for the growth rate and phase speed of the
+simulated intraseasonal oscillations.
+However, because there was no observations on the sources and strength 
+of mechanical damping in the MJO, choices of the damping strength
+in the models vary over a wide range from highly viscous 
+to totally inviscid.
+This observational study examines the sources and strength of mechanical 
+damping in the MJO by calculating its zonal momentum budget using 
+15 years (1979-1993) of daily NCEP/NCAR and ECMWF reanalyses data.
+Uncertainties in budget estimates are significantly reduced by comparing
+two different reanalyses, and by constructing long-term composites and
+considering only the statistically significant signals.
+
+The results show that the MJO is a highly viscous oscillation, with
+a 3-5 day time-scale damping both in the upper troposphere 
+and in the lower troposphere above the boundary layer.
+The damping in the upper troposphere is mainly caused by linear advections
+associated with the strong (about 0.2 day$^{-1}$) time-mean zonal divergence 
+and the strong time-mean vertical motion in the warm pool region.
+The damping in the lower troposphere is caused by the convective momentum
+flux convergence and the nonlinear meridional advection.
+Meridionally, the damping is confined near the equator between 10N and 10S.
+
+\newpage
+
+\noindent{\bf 1. Introduction}
+
+  Discovered by Madden and Julian (1971, 1972), the Madden-Julian
+Oscillation (MJO) is the dominant intraseasonal mode of variability in
+tropical convection and circulation (e.g. Weickmann et al. 1985, Lau
+and Chan 1985, Salby and Hendon 1994, Wheeler and Kiladis 1999). It
+affects a wide range of tropical weather such as the onset and breaks
+of the Indian and Australian summer monsoons (e.g. Yasunari 1979,
+Hendon and Liebmann 1990), and the formation of tropical cyclones
+(e.g. Nakazawa 1986, Liebmann et al. 1994).  It also drives
+teleconnections to the extratropics (e.g., Lau and Phillips 1986,
+Winkler et al. 2001) and impacts some important extratropical weather
+(e.g. Higgins and Mo 1997, Higgins et al. 2000). On a longer
+timescale, the MJO is observed to trigger or terminate some El Nino
+events (e.g. Kessler et al. 1995, Takayabu et al. 1999, Bergman et
+al. 2001).  Therefore, the MJO is important for both extended-range
+weather prediction and long-term climate prediction.
+
+Tropical intraseasonal variability is poorly simulated in general
+circulation models (GCMs).  Typically, simulated phenomena are too
+weak and propagate too fast (e.g. Hayashi and Sumi 1986, Hayashi and
+Golder 1986, 1988, 1993, Lau et al. 1988, Slingo et al. 1996). 
+To solve this problem, 
+many theoretical studies have examined the feedback mechanisms which may
+affect the MJO's amplitude and phase speed, especially the wave-heating
+feedback mechanisms.
+Different types of heating parameterizations have been studied, such as
+wave-CISK (Convective Instability of the Second Kind;
+e.g. Lau and Peng 1987; Chang and Lim 1988),  
+frictional wave-CISK (e.g. Wang 1988; Salby et al. 1994),
+WISHE (Wave Induced Surface Heat Exchange; 
+(e.g. Emanuel 1987; Neelin et al. 1987), 
+charge-discharge (e.g. Blade and Hartmann 1993; 
+Hayashi and Golder 1997), 
+and cloud-radiation interaction (Raymond 2001).
+
+In these theoretical studies, linear, dissipative models were
+often used.
+The momentum equation was often linearized
+about a state at rest, neglecting the advective tendency:
+\begin{eqnarray}
+\frac{\partial u'}{\partial t} 
+= - \frac{\partial \phi '}{\partial x} + f v' - \epsilon u' 
+\label{eqn_linear1}
+\\
+\frac{\partial v'}{\partial t} 
+= - \frac{\partial \phi '}{\partial y} - f u' - \epsilon v' 
+\label{eqn_linear2}
+\end{eqnarray}
+where $u$ is the zonal wind, $v$ is the meridional wind, 
+$\phi$ the geopotential
+height, and $f$ the Coriolis parameter. 
+The mechanical damping is usually represented as a Raleigh friction with
+a time-scale of $\epsilon^{-1}$.
+In addition to the different kinds of heating parameterizations, 
+the mechanical damping has also been shown to be important for
+the growth rate and phase speed of the simulated intraseasonal oscillations. 
+When adding a strong damping to the free Kelvin waves, 
+Chang (1977) found that the damping can significantly increase
+the intrinsic vertical wavelength and decrease the intrinsic phase speed.
+In a wave-CISK type model, Chao (1987) found that the phase speed of the
+simulated intraseasonal oscillation decreases
+with increasing damping.
+In a WISHE model of the MJO, 
+Neelin et al. (1987) found that the growth rate 
+of the unstable Kelvin modes significantly decreases with increasing
+mechanical damping, and this was later confirmed by Neelin and Yu (1994)
+and Goswami and Rao (1994).
+However, because there was no observational study on the magnitude and sources
+of mechanical damping in the MJO, 
+the choices of damping magnitude in the theoretical models varied over a
+wide range, from highly viscous (e.g. 1 day in Chao 1987), to weakly
+viscid (e.g. 25 days in Salby et al. 1994), to totally inviscid
+(e.g. Xie 1994).
+
+The budget terms which are not explicitly expressed in the linearized 
+Eqs. \ref{eqn_linear1} - \ref{eqn_linear2}
+include the advective tendency and the effect of convective momentum transport
+(CMT, also called "cumulus friction" in some previous studies),
+and therefore they are the possible sources of mechanical damping.
+In the MJO models which did use a strong damping, the source of the damping
+was usually assumed to be the CMT. 
+CMT was shown to be important for the synoptic-scale waves in both
+the momentum budget (Stevens 1979) and the vorticity budget
+(e.g. Reed and Johnson 1974; Shapiro 1978; 
+Stevens 1979; Tollend and Esbenson 1982; see review by Sui and Yanai 1986).
+For the MJO, 
+the importance of CMT was also shown by two recent observational
+studies (Houze et al. 2000; Tung and Yanai 2002a,b).
+Using Doppler radar data collected aircraft and ship radars during TOGA COARE, 
+Houze et al. (2000) studied the mesoscale momentum transport in 
+the "super convective systems" in different phases of the MJO event.
+They found that
+the mesoscale momentum transport provides damping to
+the zonal wind in the westerly onset phase, but acceleration during the
+westerly wind burst phase.
+Using TOGA COARE sounding array momentum budgets, 
+Tung and Yanai (2002a,b) studied the area-averaged CMT, 
+which includes
+both the convective-scale momentum transport and the mesoscale momentum
+transport (see Carr and Bretherton 2001, Tung and Yanai 2002a, 
+and Lin and Mapes 2004 for discussions
+on the physics of CMT). 
+They found that the area-averaged CMT is strongly modulated by the MJO
+event, and provides acceleration in the westerly onset phase,
+but damping in the westerly wind burst phase, 
+which is in opposite sign to the effect of mesoscale momentum transport.
+In these two studies, the magnitude of CMT effect was not compared with
+those of the other momentum budget terms at the MJO time-scale, and 
+the equivalent damping strength was not estimated.
+Furthermore, Weickmann et al. (1997) calculated the vertically-integrated
+angular momentum budget for the MJO, and found that the advective tendency
+is a dominant budget term. This suggests that the advective tendency may be
+another important source of mechanical damping. 
+
+The purpose of this study is
+to evaluate the sources and strength of mechanical damping in the observed MJO
+by calculating the MJO momentum budget using 15 years of daily
+NCEP/NCAR and ECMWF reanalyses. 
+Because the MJO circulation near the equator is dominated by the zonal wind,
+we focus on the zonal momentum budget.
+The main budget uncertainties associated
+with pressure gradient forces and advection terms are reduced by (1)
+comparing between NCEP and ECMWF reanalyses, whose consistencies gave
+us more confidence, and (2) constructing long-term (15 years) MJO
+composite and considering only the statistically significant signals,
+which are likely real signals unless the reanalyses have
+errors coherent with the MJO.
+
+  The datasets used in this study are described in section 2.  The
+time filtering and intraseasonal composite (regression) methods are
+described in section 3.  The zonal momentum budget results are reported in
+section 4. Summary and discussions are given in section 5.
+\\
+
+\noindent{\bf 2. Data}
+  
+  The datasets used include 15 years (1979-1999) of daily reanalyses data
+from two different centers: NCEP and ECMWF. The variables used include
+upper air wind, geopotential height, and vertical pressure velocity.
+The horizontal resolution is 2.5 degree longitude by 2.5 degree latitude.
+Zonal momentum budget is calculated for both 
+reanalyses following Carr and Bretherton (2001).  The zonal momentum
+equation can be written:
+\begin{eqnarray}
+\frac{\partial u}{\partial t} = 
+- u \frac{\partial u}{\partial x}
+- v \frac{\partial u}{\partial y}
+- \omega \frac{\partial u}{\partial p}
++ f(y) v
+- \frac{\partial \phi}{\partial x}
++ X 
+\label{eqn_all}
+\end{eqnarray}
+where u is the zonal wind, v the meridional wind, $\omega$ the
+vertical pressure velocity; x and y are E-W and N-S distance, f the
+Coriolis parameter, and $\phi$ the geopotential.
+Here X represents accelerations due to all subgrid-scale
+processes. In the free troposphere (above the effects of boundary
+layer turbulence eddies), over the open ocean (away from the effects
+of topographically induced gravity waves), it is reasonable to assume
+that convective momentum transport is the dominant subgrid-scale
+process. Under this assumption, we can write:
+\begin{eqnarray}
+X = \frac{\partial}{\partial p} <u' \omega '>
+\label{eqn_residual}
+\end{eqnarray}
+where $< \hspace*{0.2in}>$ denotes an ensemble average at a given pressure
+level, and primes denote the local perturbation from the ensemble
+average.  In this way, we define $X$ to be the acceleration of the
+zonal flow due to the convective momentum flux convergence. 
+
+  Each budget term of Eq. \ref{eqn_all} was calculated using daily
+data at each 2.5 degree longitude by 2.5 degree latitude
+grid. Derivatives were evaluated using central difference scheme. The
+results were then averaged to pentad data along the equator (between
+5N and 5S) with a zonal resolution of 10 degree longitude.
+
+For constructing the MJO composite, 
+we also used 15 years (1979-1993) of pentad CMAP precipitation data 
+(Xie and Arkin 1997).  The horizontal resolution is also 2.5 degree 
+longitude by 2.5 degree latitude. We averaged the data along the equator
+(between 5N and 5S) with a zonal resolution of 5 degree longitude.
+\\
+
+\noindent{\bf 3. Method}
+
+The MJO is a broad-band phenomenon, with an averaged period of 45 days
+but a fairly wide spread from 20 to 80 days
+(see review by Madden and Julian 1994). Its deep convection signal is
+dominated by wavenumber 1-6, while its circulation signal is dominated
+by wavenumber 1 (e.g. Salby and Hendon 1994, Wheeler and Kiladis 1999).
+The variance of its deep convection signal has two centers: western
+Pacific and eastern Indian Ocean, and over these two centers, the MJO
+propagates eastward with a slow phase speed of about 5 m/s
+(e.g. Wheeler and Kiladis 1999, Lin et al. 2003).
+
+These characteristics were used to isolate the MJO signal. Lin et al. (2003)
+discussed the different methods used in previous observational and
+modeling studies. The different methods often give
+qualitatively similar results in terms of propagation characteristics
+and phase difference among different variables.
+This consistency is apparently
+because strong intraseasonally filtered deep convection fluctuations along the
+equator are dominated, both in number and strength, by coherent
+eastward propagating events (Wang and Rui 1990).  Linear composite
+methods used in most of the previous studies (e.g. phase sum,
+correlation, regression) are apparently dominated by these strong
+eastward propagating events.
+The method used in this study is similar to that used 
+in Lin et al. (2003) and Lin and Mapes (2003). The procedure is as follows:\\
+(1) The zonal means were first removed from all datasets.\\
+(2) The datasets were then filtered using a 30-70 day Murakami (1976) filter,
+whose response function was shown in Lin et al. (2003).  The central
+frequency corresponds to a period of 45 day.  The half amplitude is at
+periods of 30 day and 70 day.  
+We also tested the Lanczos filter (Duchan 1979), and the results were
+not sensitive.\\
+(3) For the master MJO index, we filtered the CMAP precipitation in time
+as above, and also in space, retaining wavenumbers 1-6.\\
+(4) To study the MJO phenomena in its two centers of variance, we averaged
+the datasets in two boxes: a western Pacific box between 150-160E and 5N-5S,
+and an eastern Indian Ocean box between 80-90E and 5N-5S.
+For each box, an MJO composite was constructed using
+linear regression with respect to the filtered CMAP precipitation at the
+same box, and the regression coefficient was multiplied by one standard
+deviation of the filtered CMAP precipitation.
+The confidence level of linear correlation
+was estimated following Oort and Yienger (1996).  \\
+(5) Regressions were done for
+all seasons of the year, as well as for individual seasons
+(December-February, March-May, June-August, and September-November).
+\\
+ 
+\noindent{\bf 4. Results}
+
+\noindent{\it 4.1 Vertical structure of the MJO at the equator}
+
+  Before examing the MJO zonal momentum budget, we first look at the
+vertical structure of the MJO, which is important for
+understanding later the zonal momentum budget.
+The composite vertical structure of MJO in the western Pacific is shown in 
+Fig. \ref{vuwzeddyncep155} using 15 years (1979-1993) of NCEP reanalysis 
+data averaged between 5N-5S and 150-160E. The time lag is with respect
+to the time of maximum precipitation.  The time evolution is from the
+right to the left, showing the local evolution of measured variables
+as the eastward-moving MJO passes the measurement longitude.  The
+zonal wind $u$ (Fig. \ref{vuwzeddyncep155}a) shows a simple two-layer 
+structure with the upper layer out of phase with the lower layer.
+This two-layer structure is well-known from many previous observations
+(e.g. Madden and Julian 1971, 1972, Weickmann et al. 1985, Knutson
+and Weickmann 1987).  However, an interesting feature which
+did not bring much attention is that the maxima of both the two layers
+are at a very high altitude, not the 850 mb and 200 mb levels used in
+many previous MJO studies.  The maximum of the lower layer is around
+600 mb (just below the 0 C level), while that of the upper layer is
+around 150 mb (just below the tropopause).  It means that at the time
+of maximum precipitation, the zonal inflow is just below the 0 C
+level, and the zonal outflow is just below the tropopause.
+Consistent with this inflow-outflow feature, the vertical motion
+(Fig. \ref{vuwzeddyncep155}b) concentrates in the upper troposphere.  For
+clarity, the two-dimensional flow is plotted using arrows in
+Fig. \ref{vuwzeddyncep155}c.  This middle troposphere inflow and near
+tropopause outflow structure are consistent with the top-heavy heating
+profile in the MJO shown in Lin et al. (2003).
+Therefore, the MJO is associated with a vertical mode concentrating in the
+upper half of the troposphere.
+
+  The vertical motion shows a westward phase tilt with height.  It
+develops first in the lower troposphere, and then shifts upward as it
+intensifies.  This westward phase tilt of vertical motion is
+consistent with the westward phase tilt of the associated heating
+anomaly shown in Lin et al. (2003), which is caused by vertical phase
+tilts of convective heating in the earlier stages, and stratiform
+heating in the later stages.
+
+  The geopotential height $Z$ (contours in Fig. \ref{vuwzeddyncep155}c) 
+has a large amplitude in the near-tropopause outflow layer but a small 
+amplitude in the middle-troposphere inflow layer.
+$Z$ lags $u$ at both the inflow and outflow layers.
+The phase differences is about 5 days 
+in the outflow layer and 10 days in the inflow layer. 
+The phase difference in the upper layer is smaller than those found by
+Kiladis and Weickmann (1992) and Hsu (1996). The reason is that we removed
+the zonal mean component from all datasets while they didn't, and our
+test using data retaining zonal mean showed that the
+zonal mean component in geopotential height increases the $u$ and $Z$
+phase difference in western Pacific (not shown).
+
+Composites constructed using 15 years (1979-1993)
+of ECMWF reanalysis data show similar wave structure as the NCEP data 
+(Fig. \ref{vuwzeddyecmwf155}).
+We also checked the composites for each individual seasons (DJF, MAM, JJA
+and SON).
+The wave structures are generally similar to the all-seasons composites.
+
+In summary, the equatorial wave structure of the MJO has the following 
+three characteristics:
+\\
+(1) It is associated with a vertical mode concentrated in the upper half of 
+the troposphere,
+with middle-troposphere inflow and near-tropopause outflow at the time
+of maximum precipitation.\\
+(2) The vertical motion has a westward phase tilt with height.\\
+(3) Geopotential height lags zonal wind by about 5-10 days at both the 
+inflow and outflow layers.
+
+The phase difference between $u$ and $Z$ has implications for the zonal
+momentum budget.
+Eq. \ref{eqn_linear1} suggests that when the damping is zero, 
+the balance near the equator is simply between the local tendency 
+and the pressure gradient force. 
+In a neutral wave, 
+this balance leads to an in-phase relationship between $u$ and $Z$.
+The observed $u$-$Z$ phase difference in the MJO 
+suggests that some damping terms
+may contribute to the zonal momentum budget.
+In order to know exactly
+what these ``extra'' terms are, in the next section we directly
+examine the zonal momentum budget. \\
+
+\noindent{\it 4.2 Zonal momentum budget of the MJO} 
+
+  From Eq. \ref{eqn_all}, we can write the MJO anomalous zonal
+momentum equation:
+\begin{eqnarray}
+\frac{\partial \widetilde{u} '}{\partial t} =
+- \frac{\partial \widetilde{\phi} '}{\partial x}
++ \widetilde{fv}'
++ (- \widetilde{u \frac{\partial u}{\partial x}} '
+- \widetilde{v \frac{\partial u}{\partial y}} '
+- \widetilde{\omega \frac{\partial u}{\partial p}} ')
++ \widetilde{X} '
+\label{eqn_mjo}
+\end{eqnarray}
+where tilde denotes deviation from zonal mean, prime denotes 
+30-70 day temporally filtered anomaly.  The MJO zonal momentum budget
+terms at the equator (averaged between 150E-160E and 5N-5S) are shown
+in Figs. \ref{vbudgeteddy_nc} and \ref{vbudgeteddy_ec} for NCEP and ECMWF
+reanalyses, respectively.  The Coriolis force is small near the
+equator and is not shown.  The two different reanalyses show similar
+patterns for each of the three budget terms, giving us more confidence
+in the results.  Moreover, only signals with correlation above the
+$95\%$ confidence level are plotted in Figs. \ref{vbudgeteddy_nc} and
+\ref{vbudgeteddy_ec}.  These signals are likely real unless there are
+errors in the reanalyses which are systematically coherent with the MJO.
+In the upper troposphere, the dominant balance is between the
+pressure gradient force and the advective tendency. The local
+tendency is very small, as well as the budget residual.
+In the lower troposphere, the advective tendency and the budget residual 
+are of similar amplitude as the local tendency and pressure gradient force.
+The MJO zonal momentum budgets for each individual seasons are similar
+to the all-season results (not shown).
+Therefore, the advective tendency is important for the MJO zonal momentum
+budget in both the upper and the lower tropospheres, while the budget residual
+is important in the lower troposphere.
+
+The budget residual (Figs. \ref{vbudgeteddy_nc}d, \ref{vbudgeteddy_ec}d)
+shows a two-layer structure, with the residual near the tropopause out of phase
+with that in the lower troposphere.
+This is consistent with the vertical structure of budget residual
+in the TOGA COARE MJO events observed by 
+Tung and Yanai (2002b, their Figs. 8b, 9b).
+During the westerly wind burst, the budget residual provides a damping
+to the zonal wind, which is also consistent with the TOGA COARE results.
+These results suggest that the budget residual from both reanalyses 
+do represent the effect of CMT, and hereafter we'll call the budget residual
+convective momentum flux convergence (CMFC) 
+as defined in Eq. \ref{eqn_residual}.
+
+The large contribution of advective tendency to the MJO zonal momentum
+budget is intriguing and next we examine what cause this strong
+advection.
+The zonal, meridional and vertical components of the advective tendency 
+are shown in Figs. \ref{vbudgeteddy_adv}a, b and c, respectively.
+The large advection tendency in in the upper troposphere is mainly
+contributed by zonal advection (Fig. \ref{vbudgeteddy_adv}a) and vertical
+advection (Fig. \ref{vbudgeteddy_adv}c), while that in the lower
+troposphere is mainly contributed by meridional advection
+(Fig. \ref{vbudgeteddy_adv}b).  
+Each of these components
+contain both linear and nonlinear effects, which can be decomposed into
+(see Appendix):
+\begin{eqnarray}
+- \widetilde{u \frac{\partial u}{\partial x}} ' & = &
+- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x} 
+- \widetilde{u} ' \frac{\partial [\widetilde{u}]}{\partial x}
++ other \hspace*{0.05in}terms
+\label{eqn_adv_u}
+\\
+- \widetilde{v \frac{\partial v}{\partial y}} ' & = &
+- [\widetilde{v}] \frac{\partial \widetilde{v} '}{\partial y} 
+- \widetilde{v} ' \frac{\partial [\widetilde{v}]}{\partial y}
++ other \hspace*{0.05in}terms
+\label{eqn_adv_v}
+\\
+- \widetilde{\omega \frac{\partial u}{\partial p}} ' & = &
+- [\widetilde{\omega}] \frac{\partial \widetilde{u} '}{\partial p}
+- \widetilde{\omega} ' \frac{\partial [\widetilde{u}]}{\partial p}
++ other \hspace*{0.05in}terms
+\label{eqn_adv_w}
+\end{eqnarray}
+where $[ \hspace*{0.2in}]$ denotes time-mean.
+On the righthand side of each equation, the first two terms are linear
+advection terms associated with time-mean zonal asymmetric flow,
+while the other terms include the linear terms associated with zonal-mean
+and the nonlinear terms (see Appendix).
+The first two linear terms 
+were calculated from the corresponding time-mean 
+and the MJO anomalies, and
+the other terms were derived as the residual.
+For the zonal advection and the vertical advection, the corresponding time-mean
+was taken to be the 15-year mean.
+For the meridional advection, because there is a strong seasonal variation
+in meridional wind, the time-mean was taken to be 15-year seasonal mean
+for one season, using DJF here as an example.
+
+First we look at the decomposition of
+the zonal advection (Fig. \ref{vbudgeteddy_adv_u})
+and the vertical advection (Fig. \ref{vbudgeteddy_adv_w}), which are important
+in the upper troposphere.
+The zonal advection (Fig. \ref{vbudgeteddy_adv_u}) is dominated by the
+first two linear terms, both of which contribute substantially to the budget.
+The vertical advection (Fig. \ref{vbudgeteddy_adv_w}) is also dominated by
+the first two linear terms, especially 
+$- [\widetilde{\omega}] \frac{\partial
+\widetilde{u}'}{\partial p}$ (Fig. \ref{vbudgeteddy_adv_w}a).  
+Therefore, the zonal momentum budget of the MJO is basically linear in the
+upper troposphere.
+This is consistent with the finding of Weickmann et al. (1997) that 
+the vertically-integrated MJO angular momentum budget is basically linear,
+because the vertically-integrated momentum budget is mainly contributed
+by the upper troposphere.
+
+Next we look at the decomposition of the 
+the meridional advection (Fig. \ref{vbudgeteddy_adv_v}), which is important
+in the lower troposphere.
+The meridional advection is dominated by the nonlinear terms, which may be
+contributed by the sub-MJO scale oscillations.
+
+In summary, in the MJO zonal momentum budget,
+the advective tendency is a major budget term 
+in both the upper and lower tropospheres, while the CMFC
+is a major budget term in the lower troposphere.
+The advective tendency in the upper troposphere is dominated by the linear terms
+associated with time-mean zonal and vertical motions, including 
+$- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x}$, 
+$- \widetilde{u} ' \frac{\partial [\widetilde{u}]}{\partial x}$, and
+$- [\widetilde{\omega}] \frac{\partial \widetilde{u} '}{\partial p}$,
+while that in the lower troposphere is dominated by the nonlinear terms.
+Therefore, near the equator, the MJO zonal momentum budget equation
+Eq. \ref{eqn_mjo} can be simplified to:
+\begin{eqnarray}
+\frac{\partial \widetilde{u} '}{\partial t} =
+- \frac{\partial \widetilde{\phi} '}{\partial x}
+- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x}
+- \widetilde{u} ' \frac{\partial [\widetilde{u}]}{\partial x}
+- [\widetilde{\omega}] \frac{\partial \widetilde{u} '}{\partial p}
+- \widetilde{v \frac{\partial u}{\partial y}} '
++ \widetilde{X} '
+\label{eqn_mjo2}
+\end{eqnarray}
+\\
+
+\noindent{\it 4.3 Understanding the linear advection terms in the upper
+troposphere} 
+
+The dominant linear advection terms in the upper troposphere 
+own their existence to the time-mean
+zonal wind $[\widetilde{u}]$, 
+zonal divergence $\frac{\partial [\widetilde{u}]}{\partial x}$,
+and vertical velocity $[\widetilde{\omega}]$.
+To help understanding these terms, 
+we plot the 15 year (1979-1993) climatological mean of vertical velocity,
+zonal divergence, and zonal wind 
+in Fig. \ref{vbudgeteddy_mean}.
+For consistency with the MJO anomaly, we plot here the zonal asymmetric
+components, but the zonal means are actually much smaller.
+The warm pool region has the strongest climatological deep convection 
+in the world. The deep convection is associated with strong upward motion
+(Fig. \ref{vbudgeteddy_mean}a). The vertical velocity profile is very top-heavy,
+and is therefore associated with strong upper-level zonal divergence
+concentrating in a thin layer near the tropopause 
+(Fig. \ref{vbudgeteddy_mean}b).
+The upper-level zonal wind over the warm pool is easterly
+(Fig. \ref{vbudgeteddy_mean}c), which is presumably associated with the Gill
+(1980) pattern associated with a stationary heating source.
+The wind is strong within a thin layer near the tropopause because the
+zonal divergence is concentrated in this layer.
+Fig. \ref{vbudgeteddy_mean} only shows the annual mean, so the upper-level
+upward motion and zonal divergence are weaker over the eastern Indian Ocean.
+The long-term composite seasonal variation of upper-level vertical velocity,
+zonal divergence, and zonal wind (Fig. \ref{vbudgeteddy_season}) show
+that they are actually very strong over the eastern Indian Ocean during
+northern summer.
+
+When the MJO travels in
+such a large-scale environment: 
+(1) $- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x}$
+(Fig. \ref{vbudgeteddy_adv_u}a) lags $\widetilde{u}'$ 
+(Fig. \ref{vuwzeddyncep155}a) by a
+quarter cycle because the time-mean upper-level wind is easterly over
+the warm pool (Fig. \ref{vbudgeteddy_mean}c), and it advects the anomalous zonal
+wind gradience in the MJO.
+(2) $- \widetilde{u} ' \frac{\partial [\widetilde{u}]}{\partial x}$
+(Fig. \ref{vbudgeteddy_adv_u}b) is out of phase
+with $\widetilde{u}'$ because the time-mean upper level zonal divergence 
+is positive over the
+warm pool (Fig. \ref{vbudgeteddy_mean}b), and it is advected by the zonal
+wind anomaly in the MJO.
+(3) $- [\widetilde{\omega}] \frac{\partial \widetilde{u} '}{\partial p}$
+(Fig. \ref{vbudgeteddy_adv_w}a)
+is out of
+phase with the upper-level $\widetilde{u}'$ 
+(Fig. \ref{vuwzeddyncep155}a) because zonal
+wind shear $\frac{\partial \widetilde{u}'}{\partial p}$ is in phase with
+upper-level $\widetilde{u}'$ and the time-mean vertical motion is
+upward (negative
+$[\widetilde{\omega}]$, Fig. \ref{vbudgeteddy_mean}a).
+
+  Why, then, is the local tendency much smaller than the advective
+tendency?  We can understand this using a simple scale analysis.
+The basic scales for the MJO and the time-mean flow over the warm pool
+are:
+
+$T \approx  40$ days \hspace*{1.15in} period\\
+\hspace*{0.2in}
+$L \approx  4 \times 10^{7}$ m  \hspace*{1.0in} zonal wavelength\\
+\hspace*{0.15in}
+$[\widetilde{u}]  \approx 10$ m/s  
+\hspace*{1.2in} time-mean upper-level zonal wind\\
+\hspace*{0.12in}
+$\frac{\partial [\widetilde{u}]}{\partial x} \approx 0.2$ $day^{-1}$ 
+\hspace*{1.0in} time-mean upper-level zonal divergence
+
+From these scales we can estimate the magnitude of the local tendency and
+the dominant linear zonal advection terms:
+\begin{eqnarray}
+\frac{\partial \widetilde{u} '}{\partial t} 
+& \approx & 2 \widetilde{u} '/(0.5T) 
+\approx \widetilde{u} '/ (10 \hspace*{0.1in}days)  \nonumber\\
+- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x} 
+& \approx & [\widetilde{u}] \times 2 \widetilde{u} ' /(0.5 L)
+\approx \widetilde{u} '/ (10 \hspace*{0.1in}days)  \nonumber\\
+- \widetilde{u} ' \frac{\partial [\widetilde{u}]}{\partial x}
+& \approx & \widetilde{u} '/ (5 \hspace*{0.1in}days)  \nonumber
+\end{eqnarray}
+Therefore, the linear zonal advection terms is larger than the local tendency.
+Because the vertical advection terms enhance the zonal advection terms, 
+the total advective tendency 
+(Fig. \ref{vbudgeteddy_nc}c), when scaled using $\widetilde{u}'$ 
+(Fig. \ref{vuwzeddyncep155}a),
+is equivalent to a time-scale of 2-3 days, which is much shorter
+than the 10 days time-scale of local tendency.
+Therefore, the dominant balance between advective tendency and
+pressure gradient force in the upper troposphere 
+is a physically robust feature for the MJO.
+
+  In summary, over the warm pool region, 
+the strong climatological deep convection is
+associated with strong upward motion,
+strong upper-level zonal divergence, 
+and strong upper-level easterly wind.
+Simple scale analysis shows that the magnitudes of these time-mean flows
+are bound to cause an advective tendency much larger than the local
+tendency at the MJO time-scale, leading to the dominant balance between
+advective tendency and pressure gradient force.
+\\
+
+\noindent{\it 4.4 Equivalent linear damping} 
+
+To get quantitative estimates of the equivalent linear damping strength in
+the MJO, we regressed the MJO anomalies of the budget terms to the MJO
+zonal wind anomaly
+(Fig. \ref{damping}).
+When a budget term is in phase (out of phase) with the zonal wind,
+it provides a forcing (damping).
+The unit of the regression coefficient is 1/day, i.e., the inverse of the
+coefficient gives the damping time-scale in the unit of days.
+The corresponding correlation coefficient indicates how well the budget
+term is represented by a linear damping.
+
+The pressure gradient force (Fig. \ref{damping}a) 
+provides a 2-3 days forcing in the upper
+troposphere (150-300 mb), and a 3-5 days forcing in the lower troposphere
+(below 700 mb). 
+This strong forcing can not be balanced by the local tendency, which, as shown
+in section 4.3, has a time-scale of about 10 days.
+The Coriolis force is also small near the equator.
+Therefore, some strong dampings are needed to balance the pressure gradient
+force. In other words, the MJO is a highly viscous oscillation.
+
+In the upper troposphere, the damping mainly comes from 
+the advective tendency (Fig. \ref{damping}b),
+which, as shown in section 4.2, includes
+$- \widetilde{u} ' \frac{\partial [\widetilde{u}]}{\partial x}$ and
+$- [\widetilde{\omega}] \frac{\partial \widetilde{u} '}{\partial p}$.
+The CMFC (Fig. \ref{damping}c) also contributes slightly
+near the tropopause.
+In the lower troposphere, the damping comes equally from the advective tendency
+(the nonlinear meridional advection term)
+and the CMFC.
+The linear correlation coefficient is generally large when the regression
+coefficient is large, suggesting the usefulness of linear damping
+representation.
+
+It is also important to know the meridional distribution of damping.
+Fig. \ref{damping200} shows the meridional distribution at 200 mb of damping due
+to the advective tendency.
+The damping is large only near the equator between 10N-10S.
+This is because the strong upper-level zonal divergence and vertical motion 
+are confined to near the equator.
+The damping in the lower levels also has its largest value near the equator 
+(not shown).
+\\
+
+\noindent{\bf 5. Summary and discussions}
+
+  This study examined the equatorial wave structure and 
+zonal momentum budget of the MJO. The results are
+schematically shown in Fig. \ref{schematic_mjo}. 
+The equatorial wave structure of the MJO 
+is associated with a vertical mode concentrated in the upper half of
+the troposphere,
+with middle-troposphere inflow and near-tropopause outflow at the time
+of maximum precipitation.
+The vertical motion has a westward phase tilt with height.
+Geopotential height lags zonal wind by about 5-10 days at both the
+inflow and outflow layers.
+
+In the MJO zonal momentum budget, the advective tendency is a major budget
+term in both the upper and lower tropospheres, while the CMFC
+is a major budget term only in the lower troposphere.
+The advective tendency in the upper troposphere comes from the linear
+terms associated with time-mean zonal and vertical motions, while that
+in the lower troposphere comes from the nonlinear meridional advection.
+The simplified MJO zonal momentum equation is Eq. \ref{eqn_mjo2}.
+
+The strong linear advection terms in the upper troposphere can be understood
+from the time-mean flow in the warm-pool region.
+The warm pool region has the strongest
+climatological deep convection in the world. The deep convection is
+associated with strong upward motion ($[\omega]<0$), 
+strong upper-level zonal divergence
+($\partial [u]/ \partial x >0$), and strong upper-level easterly wind
+($[u] < 0$).
+When the MJO travels in such a large-scale environment, at the upper levels,
+$-[u] \partial u'/ \partial x$ lags $u'$ by a quarter cycle, while
+both $-u' \partial [u]/ \partial x$ and $-[\omega] \partial u'/ \partial p$
+are out of phase with $u'$.
+Simple scale analysis shows that the magnitudes of the time-mean flows
+are bound to cause an advective tendency much larger than the local
+tendency at the MJO time-scale, leading to the dominant balance between
+advective tendency and pressure gradient force.
+
+When scaled by the zonal wind anomaly, the advective tendency and the
+convective momentum flux convergence together provide 
+a 3-5 day time-scale damping to the MJO
+both in the upper troposphere and in the lower
+troposphere.
+Therefore, the MJO is a highly viscous oscillation.
+The damping is large only near the equator between 10N-10S.
+
+As discussed in the introduction, 
+because there was no observational study on the sources and strength
+of mechanical damping in the MJO,
+the choices of damping strength in the theoretical models varied over a
+wide range, from highly viscous to totally inviscid.
+It would be interesting to study the effect of 
+using the observed strong damping on
+the different wave-heating feedback mechanisms.
+One possible effect is on the growth rate of the unstable intraseasonal modes.
+The unstable modes under weak damping
+may be removed under strong damping, as shown in the WISHE model of
+Goswami and Rao (1994, their Fig. 5c).
+Therefore several different feedback mechanisms may need to work together 
+to generate unstable modes
+(e.g. WISHE plus cloud-radiation feedback). 
+Another possible effect is on the phase speed of the intraseasonal modes.
+The wave-CISK model of Chao (1987) shows that
+strong damping reduces the phase speed
+of the intraseasonal modes, 
+but the effects on other feedback mechanisms need further study.
+
+The main focus of this study is on the sources and strength of 
+mechanical damping in the MJO,
+so we focus on the budget terms which are out of phase with the zonal wind.
+However, the budget terms which are in quadrature with the zonal wind,
+especially the strong
+$- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x}$
+term, 
+are also important for the MJO dynamics.
+As pointed by Houze et al. (2000), 
+when a force leads (lags) the zonal wind by a quarter cycle, 
+it tends to shorten (prolong) the period of the oscillation.
+Therefore, 
+$- [\widetilde{u}] \frac{\partial \widetilde{u} '}{\partial x}$
+tends to prolong the period of the MJO.
+This term exists because the MJO always travels in 
+the strong time-mean tropical easterly jet (Fig. \ref{vbudgeteddy_season}c),
+which is associated with both the Walker circulation
+and the local Hadley circulation.
+\\
+
+\noindent{\it Acknowledgments}
+
+We gratefully thank Klaus Weickmann and George Kiladis for carefully reading 
+an early version of the manuscript and making very helpful comments.
+We also thank Don Hooper for assistance in reading the reanalyses data.
+\\
+
+
+\noindent{\bf Appendix. Decomposition of the advection terms}
+
+Because the MJO anomaly in this study does not include the zonal mean,
+decomposition of the advection terms is more complex than when zonal mean
+is retained.
+Following Peixoto and Oort (1992, pp61-64), a quantity A can be
+decomposed into:
+\renewcommand{\theequation}{A\arabic{equation}}
+\setcounter{equation}{0}
+\begin{eqnarray}
+A = [\overline{A}] + [\widetilde{A}] + \overline{A} ' + \widetilde{A} '
+\label{A1}
+\end{eqnarray}
+where overbar represents zonal mean, tilde represents
+deviation from the zonal mean (zonal asymmetric component), 
+bracket represents time mean, and prime represents deviation from the
+time mean.
+It can be derived that:
+\begin{eqnarray}
+\widetilde{AB} ' = 
+([\widetilde{A}] \widetilde{B} ' + [\widetilde{B}] \widetilde{A} ') 
++ ([\overline{A}] \widetilde{B} '+ [\overline{B}] \widetilde{A} ')
++ ([\widetilde{A}] \overline{B} ' + [\widetilde{B}] \overline{A} ')
+\nonumber
+\\
++ (- \overline{[\widetilde{A}] \widetilde{B} '}
+   - \overline{[\widetilde{B}] \widetilde{A} '}
+   + \widetilde{A'B'}- \widetilde{[A'B']}) 
+\label{A2}
+\end{eqnarray}
+On the right hand of the equation, the terms on the first line are the
+linear terms, among which the first two are associated with time-mean
+zonal asymmetric component, and are calculated in Eqs. \ref{eqn_adv_u}
+and \ref{eqn_adv_w}.
+The third and fourth are associated with time-mean zonal-mean component.
+The fifth and sixth are associated with temporally filtered zonal-mean
+component.
+The terms on the second line are the nonlinear terms.
+When considering only the 30-70 day anomalies, the nonlinear terms will
+include some more terms corresponding to interaction with other time-scales.
+\\
+
+
+\newpage
+
+\setlength {\parindent} {-0.4in}
+{\bf REFERENCES}
+
+Bergman, J. W., H. H. Hendon, K. M. Weickmann, 2001: Intraseasonal Air-Sea
+Interactions at the Onset of El Nino.
+{\it Journal of Climate}, 14, 1702-1719.
+
+Carr, Matthew T., Bretherton, Christopher S. 2001: Convective Momentum 
+Transport over the Tropical Pacific: Budget Estimates.
+{\it J. Atmos. Sci.}, {\bf 58}, 1673-1693.
+
+Chang, C. P., 1977: Viscous internal gravity waves and low-frequency 
+oscillations in the tropics. {\it J. Atmos. Sci.}, {\bf 34}, 901-910.
+
+Chang, C. P., and H. Lim, 1988: Kelvin wave-CISK: A possible mechanism for
+the 30-50 day oscillations. {\it J. Atmos. Sci.}, {\bf 45}, 1709-1720.
+
+Cho, H.-R., K. Fraedrich, and J. T. Wang, 1994: Cloud clusters, Kelvin wave-CISK
+, and the Madden-Julian oscillations in the equatorial troposphere.
+{\it J. Atmos. Sci.}, {\bf 51}, 68-76.
+
+Crum, F. R., and T. J. Dunkerton, 1992: Analytic and numerical models of 
+wave-CISK
+with conditional heating. {\it J. Atmos. Sci.}, {\bf 49}, 1693-1708.
+
+Duchan, C.E., 1979: Lanczos filtering in one and two dimensions.
+{\it J. Appl. Meteor.}, {\bf 18}, 1016-1022.
+
+Emanuel, K. A., 1987: An air-sea interaction model of intraseasonal oscillation
+in the Tropics.
+{\it J. Atmos. Sci.}, {\bf 44}, 2324-2340.
+
+Gallus, William A., Johnson, Richard H. 1992: The Momentum Budget of an Intense 
+Midlatitude Squall Line. 
+{\it J. Atmos. Sci.}, {\bf 49}, 422-450.
+
+Gill, A. E., 1980: Some simple solutions for heat-induced tropical circulation.
+{\it Quart. J. Roy. Meteor. Soc.}, {\bf 106}, 447-462.
+
+Hayashi, Y., and A. Sumi, 1986: The 30-40 day oscillation simulated in an"aqua
+planet" model. {\it J. Meteor. Soc. Japan.}, {\bf 64}, 451-466.
+
+Hayashi, Y., and D. G. Golder, 1986: Tropical intraseasonal oscillations
+appearing in a GFDL general circulation model and FGGE data. Part I: Phase
+propagation.
+{\it J. Atmos. Sci.}, {\bf 43}, 3058-3067.
+
+Hayashi, Y., and D. G. Golder, 1988: Tropical intraseasonal oscillations
+appearing
+in a GFDL general circulation model and FGGE data. Part II: Structure.
+{\it J. Atmos. Sci.}, {\bf 45}, 3017-3033.
+
+Hayashi, Y., and D. G. Golder, 1993: Tropical 40-50 and 25-30-day oscillations
+appearing in realistic and idealized GFDL climate models and the ECMWF dataset.
+{\it J. Atmos. Sci.}, {\bf 50}, 464-494.
+
+Hendon, H. H., and B. Liebmann, 1990: A composite study of onset of the
+Australia
+monsoon. {\it J. Atmos. Sci.}, 47, 2227-2240.
+
+Houze, R. A., Chen, S. S., Kingsmill, D. E., Serra, Y., 
+Yuter, S. E. 2000: Convection over the Pacific Warm Pool in relation to 
+the Atmospheric Kelvin-Rossby Wave. {\it J. Atmos. Sci.}, {\bf 57}, 3058-3089.
+
+Hsu, H.-H., 1996: Global view of the intraseasonal oscillation during northern
+winter.
+{\it J. Climate}, {\bf 9}, 2386-2406.
+
+Inness, P. M., and D. Gregory, 1997: Aspects of the intraseasonal oscillation
+simulated by the Hadley Centre Atmosphere Model.
+{\it Climate Dyn.}, {\bf 13}, 441-458.
+
+Kessler, W. S., and M. J. McPhaden, and K. M. Weickmann, 1995: Forcing of
+intraseasonal Kelvin waves in the equatorial Pacific. {\it J. Geophys. Res.},
+100, 10613-10631.
+
+Kiladis, G. N., and K. M. Weickmann, 1992: Circulation anomalies associated
+with tropical convection during northern winter.
+{\it Mon. Wea. Rev.}, {\bf 120}, 1900-1923.
+
+Knutson, T. R., and K. M. Weickmann, 1987: 30-60 day atmospheric oscillations:
+Composite life cycles of convection and circulation anomalies.
+{\it Mon. Wea. Rev.}, {\bf 115}, 1407-1436.
+
+Lau, K. M., and P. H. Chan, 1985: Aspects of the 40-50-day oscillation during 
+the northern winter as inferred from outgoing longwave radiation. 
+{\it Mon. Wea. Rev.},
+{\bf 113}, 1889-1909.
+
+Lau, K. M., and L. Peng, 1987: Origin of low-frequency (intraseasonal)
+oscillations in the tropical atmosphere. {\it J. Atmos. Sci.},
+{\bf 44}, 950-972.
+
+Lau, K.-M., and T. J. Phillips, 1986: Coherent fluctuations of extratropical
+geopotential height and tropical convection in intraseasonal timescales.
+{\it J. Atmos.
+Sci.}, 43, 1164-1181.
+
+Lau, N. C., I. M. Held, and J. D. Neelin, 1988: The Madden-Julian oscillations
+in an idealized general circulation model.
+{\it J. Atmos. Sci.}, {\bf 45}, 3810-3831.
+
+Liebmann, B., H. H. Hendon, and J. D. Glick, 1994: The relationship between t
+tropical cyclones of the western Pacific and Indian Oceans and the Madden-Julian
+oscillation. {\it J. Meteor. Soc. Japan}, 72, 401-411.
+
+Lin, J., B. E. Mapes, M. H. Zhang, and M. Newman, 2003:
+Stratiform precipitation, vertical heating profiles, 
+and the Madden-Julian Oscillation. {\it J. Atmos. Sci.}, in press.
+
+Lin, J. L., and B. E. Mapes, 2003: Radiation budget of the tropical
+intraseasonal oscillations. {\it J. Atmos. Sci.}, accepted.
+Available at http://www.cdc.noaa.gov/$\widetilde{\hspace*{0.05in}}$jlin
+
+Lin, J., and B. E. Mapes, 2004:
+Role of convective momentum transport in tropical large-scale circulations.
+{\it J. Atmos. Sci.}, to be submitted.
+
+Lindzen, R. D., 1967: Planetary waves on beta-planes. {\it Mon. Wea. Rev.},
+{\bf 95}, 441-451.
+
+Madden, R. A., and P. R. Julian, 1971: Detection of a 40-50 day oscillation in
+the zonal wind in the tropical Pacific.
+{\it J. Atmos. Sci.}, {\bf 28}, 702-708.
+
+Madden, R. A., and P. R. Julian, 1972: Description of global-scale circulation
+cells in the tropics with a 40-50 day period.
+{\it J. Atmos. Sci.}, {\bf 29}, 1109-1123.
+
+Madden, R. A., and P. R. Julian, 1994: Observations of the 40-50-day oscillation
+-A review.
+{\it Mon. Wea. Rev.}, {\bf 122}, 814-837.
+
+Mapes, B. E., Wu, X. 2001: Convective Eddy Momentum Tendencies in Long
+Cloud-Resolving Model Simulations. 
+{\it J. Atmos. Sci.}, {\bf 58}, 517-526.
+
+Matsuno, T., 1966: Quasi-geostrophic motions in the equatorial area.
+{\it J. Meteor. Soc. Japan}, 44, 25-43.
+
+Mehta, A. V., and E. A. Smith, 1997: Variability of radiative cooling during the
+ Asian summer monsoon and its influence on intraseasonal waves.
+{\it J. Atmos. Sci.}, {\bf 54}, 941-966.
+
+Murakami, M., 1979: Large-scale aspects of deep convective activity over the
+GATE area.
+{\it Mon. Wea. Rev.}, {\bf 107}, 994-1013.
+
+Nakazawa, T., 1986: Mean features of 30-60 day variations as inferred from 
+8-year
+OLR data. {\it J. Meteor. Soc. Japan}, {\bf 64}, 777-786.
+
+Neelin, J. D., I. M. Held, and K. H. Cook, 1987: Evaporation-wind feedback and
+low-frequency variability in the tropical atmosphere.
+{\it J. Atmos. Sci.}, {\bf 44}, 2341-2348.
+
+Oort, A. H., and J. J. Yienger, 1996: Observed long-term variability in the
+Hadley circulation and its connection to ENSO. {\it J. Climate}, 9, 2751-2767.
+
+Salby, M. L., and H. H. Hendon, 1994: Intraseasonal behavior of clouds,
+temperature,
+and motion in the Tropics.
+{\it J. Atmos. Sci.}, {\bf 51}, 2207-2224.
+
+Slingo, J. M., and Coauthors, 1996: Intraseasonal oscillations in 15 atmospheric
+general circulation models: Results from an AMIP diagnostic subproject.
+{\it Climate
+ Dyn.}, {\bf 12}, 325-357.
+
+Stevens, D. E., 1979: Vorticity, momentum, and divergence budgets of
+synoptic-scale wave disturbances in the tropical eastern Atlantic.
+{\it Mon. Wea. Rev.}, {\bf 107}, 535-550.
+
+Takayabu, Y .N., Toshio Iguchi, Misako Kachi, Akira Shibata and
+           Hiroshi Kanzawa, 1999:
+Abrupt termination of the 1997-98 El Nino in response to a
+Madden-Julian oscillation.
+{\it Nature}, 402, 279-282.
+
+Tung, W. W., Yanai, M., 2002a: Convective Momentum Transport Observed during 
+the TOGA COARE IOP. Part I: General Features. {\it J. Atmos. Sci.}, {\bf 59}, 
+1857-1871.
+
+Tung, W. W., Yanai, M., 2002b: Convective Momentum Transport Observed during 
+the TOGA COARE IOP. Part II: Case Studies. {\it J. Atmos. Sci.}, {\bf 59}, 
+2535-2549.
+
+Wang, B., 1988: Dynamics of tropical low-frequency waves: An analysis of the
+moist Kelvin wave.
+{\it J. Atmos. Sci.}, {\bf 45}, 2051-2065.
+
+Wang, B., and H. Rui, 1990: Synoptic climatology of transient tropical
+intraseasonal convection anomalies.
+{\it Meteor. Atmos. Phys.}, {\bf 44}, 43-61.
+
+Weickmann, K. M., G. R. Lussky, and J. E. Kutzbach, 1985: Intraseasonal (30-60
+day) flucutations of outgoing longwave radiation and 250 mb streamfunction
+during
+northern winter. {\it Mon. Wea. Rev.}, 113, 941-961.
+
+Weickmann, K. M., G. N. Kiladis, and P. D. Sardeshmukh, 1997: The dynamics of 
+intraseasonal atmospheric angular momentum oscillations. 
+{\it J. Atmos. Sci.}, {\bf 54}, 1445-1461.
+
+Wheeler, M., and G. N. Kiladis, 1999: Convectively coupled equatorial waves:
+Analysis
+of clouds and temperature in the wavenumber-frequency domain.
+{\it J. Atmos. Sci.}, {\bf 56}, 374-399.
+
+Wu, X., and M. Yanai, 1994: Effect of vertical wind shear on the cumulus
+transport of momentum: Observations and parameterization.
+{\it J. Atmos. Sci.}, {\bf 51}, 1640-1660.
+
+Xie, P., and P. A. Arkin, 1997: Global precipitation: A 17-year monthly analysis
+ based on gauge observations, satellite estimates, and numerical model outputs.
+{\it Bull. Amer. Meteor. Soc.}, {\bf 78}, 2539-2558.
+
+Yasunari, T., 1979: Cloudiness fluctuations associated with the northern
+hemisphere
+summer monsoon. {\it J. Meteor. Soc. Japan}, 57, 227-242.
+
+Zhang, M. H., and J. L. Lin, 1997: Constrained variational analysis of sounding
+data based on column-integrated budgets of mass, heat, moisture, and momentum:
+Approach and application to ARM measurements.
+{\it J. Atmos. Sci.}, {\bf 54}, 1503-1524.
+
+
+\newpage
+
+\setlength {\parindent} {0.0in}
+\hspace*{1.8in}{\bf FIGURE CAPTIONS}
+\\
+
+\noindent{\bf Fig. \ref{vuwzeddyncep155}}
+The vertical structure of the MJO anomaly for
+(a) zonal wind (m/s),
+(b) vertical velocity (mb/day),
+and
+(c) geopotential height (m) for the 15 years (1979-1993) of NCEP reanalysis
+data averaged over 150E-160E and 5N-5S.
+Negative values are shaded.
+The arrows in (c) are the wind vectors whose horizontal component is
+the zonal wind, and vertical component the vertical velocity.
+\\
+{\bf Fig. \ref{vuwzeddyecmwf155}}
+Same as Fig. \ref{vuwzeddyncep155} except for the ECMWF reanalysis data.
+\\
+{\bf Fig. \ref{vbudgeteddy_nc}}
+Terms of the MJO zonal momentum budget:
+(a) local tendency $\frac{\partial \widetilde{u}'}{\partial t}$,
+(b) pressure gradient force $- \frac{\partial \widetilde{\phi} '}{\partial x}$,
+(c) advection terms $ (- \widetilde{u \frac{\partial u}{\partial x}} '
+- \widetilde{v \frac{\partial u}{\partial y}} '
+- \widetilde{\omega \frac{\partial u}{\partial p}}')$
+,
+and
+(d) the residual term $\widetilde{X}'$
+,
+for 15 years (1979-1993) of NCEP reanalysis data averaged over 
+150E-160E and 5N-5S.
+Unit is $m s^{-1} day^{-1}$.
+\\
+{\bf Fig. \ref{vbudgeteddy_ec}}
+As in Fig. \ref{vbudgeteddy_nc} except for 
+ECMWF reanalysis data.
+\\
+{\bf Fig. \ref{vbudgeteddy_adv}}
+As in Fig. \ref{vbudgeteddy_nc} except for three advection terms 
+for NCEP reanalysis data:
+(a) zonal advection $- \widetilde{u \frac{\partial u}{\partial x}} '$,
+(b) meridional advection $- \widetilde{v \frac{\partial u}{\partial y}} '$, 
+and 
+(c) vertical advection $- \widetilde{\omega \frac{\partial u}{\partial p}}'$.
+\\
+{\bf Fig. \ref{vbudgeteddy_adv_u}}
+As in Fig. \ref{vbudgeteddy_nc} except for three components of the zonal 
+advection term for NCEP reanalysis data:
+(a) $- [\widetilde{u}] \frac{\partial \widetilde{u}'}{\partial x}$, 
+(b) $- \widetilde{u}' \frac{\partial [\widetilde{u}]}{\partial x}$, and
+(c) other terms.
+\\
+{\bf Fig. \ref{vbudgeteddy_adv_w}}
+As in Fig. \ref{vbudgeteddy_nc} except for three components of the vertical
+advection term for NCEP reanalysis data:
+(a) $- [\widetilde{\omega}] \frac{\partial \widetilde{u}'}{\partial p}$, 
+(b) $- \widetilde{\omega} ' \frac{\partial [\widetilde{u}]}{\partial p}$, and
+(c) other terms.
+\\
+{\bf Fig. \ref{vbudgeteddy_adv_v}}
+As in Fig. \ref{vbudgeteddy_nc} except for three components of the meridional
+advection term for NCEP reanalysis data for DJF season:
+(a) $- [\widetilde{v}] \frac{\partial \widetilde{u}'}{\partial y}$, 
+(b) $- \widetilde{v}' \frac{\partial [\widetilde{u}]}{\partial y}$, and
+(c) other terms.
+\\
+{\bf Fig. \ref{vbudgeteddy_mean}}
+Annual mean 
+(a) $[\widetilde{\omega}]$ (mb/day), 
+(b) $\frac{\partial [\widetilde{u]}}{\partial x}$ (1/day),  
+and 
+(c) $[\widetilde{u}]$ (m/s), 
+for 15 years (1979-1993) of NCEP
+reanalysis data along the equator (5N-5S).
+\\
+{\bf Fig. \ref{vbudgeteddy_season}}
+Seasonal variation of 
+(a) $[\widetilde{\omega}]$ (mb/day) at 300 mb, 
+(b) $\frac{\partial [\widetilde{u]}}{\partial x}$ (1/day) at 150 mb,  
+and 
+(c) $[\widetilde{u}]$ (m/s) at 150 mb, 
+for NCEP
+reanalysis data along the equator (5N-5S).
+\\
+{\bf Fig. \ref{damping}}
+Vertical profile of linear regression coefficient of the MJO
+(a) pressure gradient force anomaly, 
+(c) advective tendency anomaly, and
+(e) budget residual anomaly,
+with respect to the zonal wind anomaly at the same level 
+for 15 years (1979-1993) of NCEP (solid line) and ECMWF (dashed line)
+reanalyses data averaged over 
+150E-160E and 5N-5S.
+The corresponding correlation coefficients are shown in (b), (d), and (f),
+respectively.
+\\
+{\bf Fig. \ref{damping200}}
+Meridional profile of (a) linear regression coefficient, and
+(b) linear correlation coefficient, between the 200 mb MJO
+advective tendency anomaly
+and zonal wind anomaly 
+averaged between 150E-160E
+for 15 years (1979-1993) of NCEP (solid line) and ECMWF (dashed line)
+reanalyses data.
+\\
+{\bf Fig. \ref{schematic_mjo}}
+Schematic depiction of the time-mean flow over the warm-pool, and the
+observed MJO wave structure and 
+zonal momentum budget.
+Regions of enhanced large-scale convection are indicated schematically
+by the clouds. The dark shading inside the clouds represents the maximum of
+the diabatic heating.
+``H'' and ``L'' represent the high and low geopotential height anomalies,
+respectively.
+Thin arrows represent the winds.
+Thick arrows above the MJO wave represent components of zonal momentum budget
+in the upper troposphere, while those below the MJO wave represent
+components in the lower troposphere.
+\\
+
+\newpage
+\pagestyle{empty}
+
+\include{report_mjo2_fig1}
+\include{report_mjo2_fig2}
+
+
+\end{document}

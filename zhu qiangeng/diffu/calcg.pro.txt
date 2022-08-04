@@ -1,0 +1,35 @@
+
+G=fltarr(nt,nt)
+G1 = fltarr(nt,nt,5)
+G2 = G1
+
+for i=0,nt-1 do begin
+ for j=0,j do begin
+  tt=(t[i]-t[j]) > 1.0e-10)*86400.*365.
+  Y = (z - u*tt) > 0
+  x = y/sqrt(4.*k*tt)
+  er = 1.-error(x)
+  G1[i,j,*] = err
+ endfor
+endfor
+
+for iz=0,nz-1 do begin
+for i=1,nt-1 do begin
+ GJ = reform(G1[i,*,iz])
+ G2[i,*,iz] = (shift(GJ,-1) - shift(GJ,1))/2./deltat
+ G2[i,i+1:*,iz] = 0
+ G2[i,0,iz] = (GJ[1]-GJ[0])/deltat
+ G2[i,i,iz] = (GJ[i]-GJ[i-1])/deltat
+endfor
+endfor
+
+for i=0,nt-1 do begin
+ for j=0,i do begin
+  G[i,j] = (G2[i,j,1]-G2[i,j,0])/deltaz
+ endfor
+endfor
+
+end
+
+;units: G: 1/(sm)  x: m/(m2/s*s)^1/2
+; sK/(sm)=K/m ;  m/s/(m2/s)K = K/m
